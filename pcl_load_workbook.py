@@ -1,19 +1,19 @@
 from openpyxl import load_workbook
 
-wb = 0
+g_wb = 0
 
 def pcl_load_workbook(filename:str):
-    global wb
-    wb = load_workbook(
+    global g_wb
+    g_wb = load_workbook(
         filename=filename,
         read_only=False,
         keep_vba=False,
         keep_links=False)
 
 def pcl_free_workbook():
-    global wb
-    del wb
+    global g_wb
+    del g_wb
 
 def pcl_get_worksheet(worksheetname):
-    global wb
-    return wb[worksheetname]
+    global g_wb
+    return g_wb[worksheetname]
