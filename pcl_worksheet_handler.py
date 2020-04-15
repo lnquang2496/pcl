@@ -18,7 +18,6 @@ g_test_case_id = []
 def ws_thread_seek(i_ws_rows, i_ws_merged_cell, i_target, i_index, i_matchcase=False):
     global g_thread_return
 
-    if (i_target)
     for loop_rows in i_ws_rows:
         for loop_cell in loop_rows:
             if ((loop_cell.value == i_target) if i_matchcase else (loop_cell.value in i_target)):
