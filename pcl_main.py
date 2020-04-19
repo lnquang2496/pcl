@@ -1,5 +1,4 @@
 import pcl_load_workbook
-import pcl_worksheet_handler
 import pcl_ws
 from memory_profiler import memory_usage
 from time import time
@@ -11,7 +10,6 @@ def main():
     pcl_load_workbook.pcl_load_workbook('test.xlsx')
     ws = pcl_load_workbook.pcl_get_worksheet('Sheet1')
     # Analyze the worksheet
-    #pcl_worksheet_handler.pcl_worksheet_init(ws)
     pcl_ws.pcl_ws_init(ws)
 
     pcl_load_workbook.pcl_free_workbook()
